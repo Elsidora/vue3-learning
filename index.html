@@ -22,6 +22,9 @@
         <button class="btn">Добавить</button>
 
         <hr />
+        <ul class="list">
+          <li class="list-item" v-for="myNote in notes">{{myNote}}</li>
+        </ul>
       </div>
     </div>
     <script src="https://unpkg.com/vue@next"></script>
