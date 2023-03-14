@@ -24,7 +24,12 @@
 
         <hr />
         <ul class="list">
-          <li class="list-item" v-for="myNote in notes">{{myNote}}</li>
+          <li class="list-item" v-for="(myNote, idx) in notes">
+            {{myNote}}
+            <button class="btn danger" v-on:click="deleteNote($event, idx)">
+              Удалить
+            </button>
+          </li>
         </ul>
       </div>
     </div>
