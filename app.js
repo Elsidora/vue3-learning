@@ -13,8 +13,13 @@ const App = {
       this.inputValue=evt.target.value
     },
     addNewNote(evt) {
-      this.notes.push(this.inputValue)
-      this.inputValue = ''
+      if (this.inputValue !== '') {
+        this.notes.push(this.inputValue)
+        this.inputValue = ''
+      }
+    },
+    toUpperCase(item) {
+      return item.toUpperCase()
     },
     deleteNote(evt, idx) {
       this.notes.splice(idx, 1)
