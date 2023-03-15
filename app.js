@@ -24,6 +24,12 @@ const App = {
     deleteNote(evt, idx) {
       this.notes.splice(idx, 1)
     }
+  },
+  computed: {
+    doubleCountComputed() {
+      console.log('doubleCountComputed')
+      return this.notes.length * 2  // если есть внутри приложения какие-то переменные, от которых вычисляем результат, то для оптимизации приложения, производительности его, эти вычисления надо кидать в computed
+    }
   }
 }
 
