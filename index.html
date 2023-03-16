@@ -10,6 +10,12 @@
     <div class="container pt-5" id="app">
       <div class="card center">
         <h1 v-text="title"></h1>
+        <!--v-text  -  заменяет интерполяцию-->
+        <h1 v-once>{{title}}</h1>
+        <!--v-once - применяется только первоначальное значение-->>
+        <button class="btn" @click="title='Теперь я Чебурашка'">
+          Изменить название
+        </button>
       </div>
     </div>
 
